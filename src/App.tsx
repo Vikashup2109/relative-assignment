@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import trendingIcon from './assets/trendingIcon.svg'
+import Card from './components/Card';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+     return (
+          <>
+               <section className='bg-[#14172B] h-screen py-40'>
+                    <div className='w-11/12 mx-auto px-4 text-[#ECF0FF]'>
+                         <h3 className='flex gap-3 items-center'>
+                              <img src={trendingIcon} alt="Trending Icon" />
+                              <span>Trending Assets</span>
+                         </h3>
+                         <div className='grid grid-cols-5 gap-10 py-20'>
+                              <Card />
+                         </div>
+
+                    </div>
+               </section>
+          </>
+     );
 }
 
 export default App;
